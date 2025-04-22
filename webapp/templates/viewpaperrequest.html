@@ -1,0 +1,87 @@
+
+
+
+{% extends 'sbase.html' %}
+
+{% block content %}
+
+<font size="" color="#6600ff">{{msg}}</font>
+
+
+<br>
+<center><h2>View Exam Paper Requests are</h2></center>
+   
+<h5>
+<table id="tab" width="100%">
+
+<tr><th>#<th>Exam ID<th>Exam Name<th>Subject<th>Assign to teacher<th>
+
+{% for r in p %}
+
+<tr><td>{{forloop.counter}}<td> {{r.examid}}<td> {{r.exam_name}}<td>{{r.subject}}
+<td>
+<form method="post" action="/viewpaperrequest/">
+{% csrf_token %}
+<input type="hidden" name="id" value="{{r.id}}">
+<table> <tr><td>
+<select name="data" required>
+	<option value="">Select Teacher
+{% for t1 in t %}
+
+	<option value="{{t1.name}};{{t1.email}}">{{t1.name}};{{t1.email}}
+
+{% endfor %}
+
+</select>
+<td>
+
+<input type="submit" value="Allot to Teacher">
+</form>
+</table>
+
+<td>
+
+<form method="post" action="/paperrequestcomplete/">
+{% csrf_token %}
+
+<input type="hidden" name="id" value="{{r.id}}">
+
+<input type="submit" value="Close Requests">
+
+</form>
+
+
+{% endfor %}
+
+</table>
+
+<br><hr><br>
+
+
+<br>
+<center><h2>View Exam Paper responses</h2></center>
+   
+<h5>
+<table id="tab" width="100%">
+
+<tr><th>#<th>Exam ID<th>Exam Name<th>Subject<th>
+
+{% for r in data %}
+
+<tr><td>{{forloop.counter}}<td> {{r.examid}}<td> {{r.exam_name}}<td>{{r.subject}}
+<td>
+ 
+<form method="get" action="/viewresponses/">
+	<input type="hidden" value="{{r.id}}" name="id">
+ <input class="form-control"   type="submit" value="View Papers">
+
+</form>
+
+{% endfor %}
+
+</table>
+
+
+</body>
+
+{% endblock %}

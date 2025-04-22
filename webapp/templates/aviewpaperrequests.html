@@ -1,0 +1,70 @@
+
+
+
+{% extends 'abase.html' %}
+
+{% block content %}
+
+<font size="" color="#6600ff">{{msg}}</font>
+
+
+<br>
+<center><h2>View Exam Paper Requests are</h2></center>
+   
+
+<table id="tab" width="100%">
+
+<tr><th>#<th>Exam ID<th>Exam Name<th>Subject<th>Status
+
+{% for r in p %}
+
+<tr><td>{{forloop.counter}}<td> {{r.examid}}<td> {{r.exam_name}}<td>{{r.subject}}
+<td><h5>{{r.stz}}
+
+{% if r.stz == 'Paper Finalized' %}
+<form method="post" action="/uploadipfs/">
+	{% csrf_token %}
+	<input type="hidden" name="file" value="{{r.paper}}">
+	<input type="hidden" name="examid" value="{{r.examid}}">
+	<input type="hidden" name="exam_name" value="{{r.exam_name}}">
+	<input type="hidden" name="subject" value="{{r.subject}}">
+	<input type="hidden" name="id" value="{{r.id}}">
+
+<table>
+<tr>	<td>
+<a href="{% url 'view_paper' paper=r.paper %}">View Paper</a>
+</td>
+	<td><input type="submit" value="Upload to IPFS and Block Chain"></td>
+
+</tr>
+</table>
+
+
+</form>{% endif %}
+
+
+
+
+
+{% if r.stz == 'Paper in dAPP' %}
+<form method="post" action="/downloadfromipfs/">
+	{% csrf_token %}
+	<input type="hidden" name="id" value="{{r.id}}">
+	<input type="submit" value="Get the Paper">
+
+
+</form>{% endif %}
+
+
+
+
+
+{% endfor %}
+
+</table>
+
+<br><hr><br>
+
+</body>
+
+{% endblock %}

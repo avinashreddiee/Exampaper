@@ -1,0 +1,14 @@
+{% extends 'rbase.html' %}
+
+{% block content %}
+
+<font size="4" color="#6600ff">File <font size="" color="#ff0033">'{{ file }}' </font>got from the IPFS server</font>
+
+<br>
+
+<form method="post" action="/viewfile/">
+{% csrf_token %}
+	<input type="hidden" name="file" value="{{file}}">
+	<input type="submit" value="Download">
+</form>
+{% endblock %}

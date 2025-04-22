@@ -1,0 +1,80 @@
+
+
+{% extends 'base.html' %}
+
+{% block content %}
+
+<font size="+1" color="#6600ff">{{msg}}</font>
+
+<style>
+        body {
+   
+        }
+        form {
+            max-width: 700px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-shadow: 2px 2px 12px #aaa;
+        }
+        label {
+            font-weight: bold;
+        }
+        input, select, textarea {
+            width: 100%;
+            padding: 8px;
+            margin: 8px 0 16px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Recipient Signup</h2><br>
+    <form method="POST" action="/rsignupaction/">
+        {% csrf_token %}
+
+        <!-- Basic Details -->
+     <table width="100%"><tr><td>   <label for="name">Name:</label>
+        <input type="text" id="name" name="name" maxlength="100" required />
+<td>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required />
+
+<tr><td colspan=2>
+<label for="phone">Organization :</label>
+        <input type="text" id="org" name="organization" required />
+
+<tr>	<td>	
+		<label for="email">Password:</label>
+        <input type="password" id="password" name="password" required />
+
+      	<td>	  <label for="phone">Phone:</label>
+        <input type="text" id="phone" name="phone" maxlength="15" />
+<tr>
+
+<tr><td colspan=2>
+<label for="phone">Organization address: </label>
+
+<textarea  rows="4" cols="" name="org_address"></textarea>
+    
+	 <tr>
+	 <td> <br>  <button type="submit">Signup</button>
+    </form>
+</body>
+
+	</table>
+{% endblock %}

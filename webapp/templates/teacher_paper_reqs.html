@@ -1,0 +1,45 @@
+
+
+
+{% extends 'tbase.html' %}
+
+{% block content %}
+
+<font size="" color="#6600ff">{{msg}}</font>
+
+
+<br>
+<center><h2>View Exam Paper Requests are</h2></center>
+   
+
+<table id="tab" width="100%">
+
+<tr><th>#<th>Exam ID<th>Exam Name<th>Subject<th>Upload Paper
+
+{% for r in data %}
+
+<tr><td>{{forloop.counter}}<td> {{r.examid}}<td> {{r.exam_name}}<td>{{r.subject}}
+<td>
+<form method="post" action="/uploadpaper/">
+	{% csrf_token %}
+	<input type="hidden" name="id" value="{{r.eid}}">
+	<table>
+<tr>
+	<td><input class="form-control"  type="file" name="file" accept="application/pdf" required>
+<td>	<input class="form-control"  type="submit" value="Upload"required>
+
+</tr>
+</table>
+
+</form>
+
+
+{% endfor %}
+
+</table>
+
+<br><hr><br>
+
+</body>
+
+{% endblock %}

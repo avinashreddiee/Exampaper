@@ -1,0 +1,72 @@
+
+
+{% extends 'abase.html' %}
+
+{% block content %}
+
+<font size="+1" color="#6600ff">{{msg}}</font>
+
+<style>
+        body {
+   
+        }
+        form {
+            max-width: 700px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-shadow: 2px 2px 12px #aaa;
+        }
+        label {
+            font-weight: bold;
+        }
+        input, select {
+            width: 100%;
+            padding: 8px;
+            margin: 8px 0 16px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+
+                            <table align="right">
+                            <tr>
+								<td><a class="nav-link" href="/aviewpaperrequests"><h3><u>View Paper Requests</u></h3></a></td>
+                            </tr>
+                            </table>
+
+
+    <h2>Create Paper Request</h2><br>
+    <form method="POST" action="/paper_request/">
+        {% csrf_token %}
+
+        <!-- Basic Details -->
+     <table width="100%"><tr><td>   <label for="name">Exam ID</label>
+        <input type="text" id="name" name="eid" maxlength="100" required />
+<tr><td>
+        <label for="email">Exam Name</label>
+        <input type="text" id="email" name="ename" required />
+      <tr>	<td>	  <label for="phone">Subject</label>
+        <input type="text" id="sub" name="sub" maxlength="15" />
+<tr>
+
+     <td> <br>  <button type="submit">Create Request</button>
+    </form>
+</body>
+
+	</table>
+{% endblock %}

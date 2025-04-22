@@ -1,0 +1,36 @@
+
+
+
+{% extends 'abase.html' %}
+
+{% block content %}
+
+<font size="" color="#6600ff">{{msg}}</font>
+
+
+<br>
+ <center><h2>Superintendent are</h2></center>
+   
+
+<table id="tab" width="100%">
+
+<tr><th>#<th>Name<th>Email<th>Phone<th>Designation
+
+{% for r in data %}
+
+<tr><td>{{forloop.counter}}<td> {{r.name}}<td> {{r.email}}<td>{{r.phone}}
+
+
+<td>{{r.designation}}
+
+
+
+{% endfor %}
+
+	</table>
+
+<br><hr><br>
+
+</body>
+
+{% endblock %}

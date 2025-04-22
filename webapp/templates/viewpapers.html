@@ -1,0 +1,47 @@
+
+
+
+{% extends 'rbase.html' %}
+
+{% block content %}
+
+<font size="" color="#6600ff">{{msg}}</font>
+
+
+<br>
+<center><h2>Exam Papers are (Get from block chain)</h2></center><br>
+   
+
+<table id="tab" width="100%">
+
+<tr><th>#<th>Exam ID<th>Exam Name<th>Subject<th>
+
+{% for r in data %}
+
+<tr><td>{{forloop.counter}}<td> {{r.examid}}<td> {{r.exam_name}}<td>{{r.subject}}
+<td>
+
+
+
+
+
+<form method="post" action="/downloadfromipfs2/">
+	{% csrf_token %}
+	<input type="hidden" name="id" value="{{r.pdf_cid}}">
+	<input type="submit" value="Get the Paper">
+
+
+</form>
+
+
+
+
+{% endfor %}
+
+</table>
+
+<br><hr><br>
+
+</body>
+
+{% endblock %}

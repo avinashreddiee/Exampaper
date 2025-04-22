@@ -1,0 +1,320 @@
+{% load static %}
+<!--
+Author: W3layouts
+Author URL: http://w3layouts.com
+-->
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Blockchain-based Examination Paper Transmission</title>
+    <!-- google fonts -->
+    <link href="//fonts.googleapis.com/css2?family=Jost:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- Template CSS -->
+    <link rel="stylesheet" href="{% static 'assets/css/style-starter.css' %}">
+</head>
+
+<body>
+  <!--header-->
+  <header id="site-header" class="fixed-top">
+    <div class="container">
+      <nav class="navbar navbar-expand-lg navbar-dark stroke">
+        <h1>
+          <a class="navbar-brand" href="index.html">
+            <i class="fa fa-pencil-square"></i> </a>
+        </h1>
+        <!-- if logo is image enable this   
+  <a class="navbar-brand" href="#index.html">
+      <img src="image-path" alt="Your logo" title="Your logo" style="height:35px;" />
+  </a> -->
+        <button class="navbar-toggler  collapsed bg-gradient" type="button" data-toggle="collapse"
+          data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false"
+          aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon fa icon-expand fa-bars"></span>
+          <span class="navbar-toggler-icon fa icon-close fa-times"></span>
+          </span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+          <ul class="navbar-nav ml-lg-auto">
+			             <li class="nav-item active">
+                            <a class="nav-link" href="/shome">Home <span class="sr-only">(current)</span></a>
+                        </li>
+
+						 <li class="nav-item mr-lg-1 active">
+                            <a class="nav-link" href="/viewteachers">View Teachers</a>
+                        </li>
+						 <li class="nav-item mr-lg-1 active">
+                            <a class="nav-link" href="/paperrequestcomplete">Paper Requests</a>
+                        </li>
+						 
+
+						 <li class="nav-item mr-lg-1 active" >
+                            <a class="nav-link" href="/slogout">Logout</a>
+                        </li>
+
+            <!--/search-right-->
+          
+            <!--//search-right-->
+          </ul>
+        </div>
+
+<style>
+
+  #table_wrapper{ solid olive;float:center; }
+  #tbody{height:350px;overflow-y:auto;width:600px;background:#b2b2b2;}
+  table{border-collapse:collapse; }
+  td{padding:1px 5px;
+  
+   padding-top: 12px;
+    padding-bottom: 12px;
+	padding: 8px;
+  /* pixels */
+ /* to avoid the hacks for the padding */
+} 
+  .td1{width:100px;}
+  .td2{width:140px;}
+  .td3{border-right-width:0;} /* optional */
+
+
+
+#tab {
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+   
+}
+
+#tab td, #tab th {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+#tab tr:nth-child(even){background-color: #f2f2f2;}
+
+#tab tr:hover {background-color: #ddd;}
+
+#tab th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #FFBB05;
+    color: white;
+}
+</style>
+	</head>
+
+        <!-- toggle switch for light and dark theme -->
+        <div class="mobile-position">
+          <nav class="navigation">
+            <div class="theme-switch-wrapper">
+              <label class="theme-switch" for="checkbox">
+                <input type="checkbox" id="checkbox">
+                <div class="mode-container py-1">
+                  <i class="gg-sun"></i>
+                  <i class="gg-moon"></i>
+                </div>
+              </label>
+            </div>
+          </nav>
+        </div>
+        <!-- //toggle switch for light and dark theme -->
+      </nav>
+    </div>
+  </header>
+  <!--/header-->
+  <!-- breadcrumb -->
+  <section class="w3l-about-breadcrumb text-center">
+    <div class="breadcrumb-bg breadcrumb-bg-about py-5">
+      <div class="container py-lg-5 py-md-4">
+        <div class="w3breadcrumb-gids">
+          <div class="w3breadcrumb-left text-left">
+            <h2 class="title AboutPageBanner">
+
+			  <!-- Title -->Superintendent Portal
+ </h2>
+    
+          </div>
+          <div class="w3breadcrumb-right">
+            <ul class="breadcrumbs-custom-path">
+          
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--//breadcrumb-->
+      <!--/-->
+      <section class="w3l-homeblock1" id="about">
+        <div class="midd-w3 py-5">
+            <div class="container py-lg-5 py-md-3">
+
+
+{% block content %}
+
+
+
+{% endblock %}
+
+
+            </div>
+        </div>
+    </section>	
+    <!--//-->
+
+
+  <!--//popular-Courses-->
+  <!--/footer-->
+  <footer class="w3l-footer-22 position-relative">
+    <div class="footer-sub py-5">
+      <div class="container py-md-5">
+        <div class="row sub-columns">
+
+          <div class="col-lg-4 col-md-6 sub-one-left ab-right-cont pr-lg-5 mb-md-0  mb-4">
+            <h6>About </h6>
+            <p>Lorem ipsum dolor sit amet elit. Velit beatae rem ullam dolore nisi esse quasi, sit amet.
+              Lorem ipsum dolor sit amet elit.voluptatem accusantium
+              doloremque.</p>
+            <div class="columns-2">
+              <ul class="social">
+                <li><a href="#facebook"><span class="fab fa-facebook-f" aria-hidden="true"></span></a>
+                </li>
+                <li><a href="#linkedin"><span class="fab fa-linkedin-in" aria-hidden="true"></span></a>
+                </li>
+                <li><a href="#twitter"><span class="fab fa-twitter" aria-hidden="true"></span></a>
+                </li>
+                <li><a href="#google"><span class="fab fa-google-plus-g" aria-hidden="true"></span></a>
+                </li>
+                <li><a href="#pinterest"><span class="fab fa-pinterest-p" aria-hidden="true"></span></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-lg-2 col-md-6 sub-two-right pl-lg-5">
+            <h6>Useful Links</h6>
+            <ul>
+              <li><a href="index.html"><span class="fas fa-chevron-right mr-2"></span>Home</a>
+              </li>
+              <li><a href="about.html"><span class="fas fa-chevron-right mr-2"></span>About</a>
+              </li>
+              <li><a href="courses.html"><span class="fas fa-chevron-right mr-2"></span>Courses</a></li>
+              <li><a href="contact.html"><span class="fas fa-chevron-right mr-2"></span>Contact</a></li>
+            </ul>
+          </div>
+          <div class="col-lg-3 col-md-6 sub-two-right pl-lg-5 mt-md-0 mt-4">
+            <h6>Help & Support</h6>
+            <ul>
+              <li><a href="#live"><span class="fas fa-chevron-right mr-2"></span>Live
+                  Chart</a></li>
+              <li><a href="#faq"><span class="fas fa-chevron-right mr-2"></span>Faq</a>
+              </li>
+              <li><a href="#support"><span class="fas fa-chevron-right mr-2"></span>Support</a>
+              </li>
+              <li><a href="#terms"><span class="fas fa-chevron-right mr-2"></span>Terms
+                  of Services</a></li>
+            </ul>
+          </div>
+          <div class="col-lg-3 col-md-6 sub-two-right mt-md-0 mt-4">
+            <h6>Research</h6>
+            <ul>
+              <li><a href="#"><span class="fas fa-chevron-right mr-2"></span> Academic Divisions</a>
+              </li>
+              <li><a href="#"><span class="fas fa-chevron-right mr-2"></span> Student Research</a>
+              </li>
+              <li><a href="#"><span class="fas fa-chevron-right mr-2"></span> Centers & Institutes</a>
+              </li>
+              <li><a href="#"><span class="fas fa-chevron-right mr-2"></span> Research Facilities</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+    <!-- copyright -->
+    <div class="copyright-footer text-center">
+      <div class="container">
+        <div class="columns">
+          <p>© 2025 Blockchain-based Examination Paper Transmission. All rights reserved.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!-- //copyright -->
+  </footer>
+  <!-- //footer -->
+
+  <!-- Js scripts -->
+  <!-- move top -->
+  <button onclick="topFunction()" id="movetop" title="Go to top">
+    <span class="fas fa-level-up-alt" aria-hidden="true"></span>
+  </button>
+  <script>
+    // When the user scrolls down 20px from the top of the document, show the button
+    window.onscroll = function () {
+      scrollFunction()
+    };
+
+    function scrollFunction() {
+      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        document.getElementById("movetop").style.display = "block";
+      } else {
+        document.getElementById("movetop").style.display = "none";
+      }
+    }
+
+    // When the user clicks on the button, scroll to the top of the document
+    function topFunction() {
+      document.body.scrollTop = 0;
+      document.documentElement.scrollTop = 0;
+    }
+  </script>
+  <!-- //move top -->
+  
+
+  <!-- Template JavaScript -->
+  <script src="assets/js/jquery-3.3.1.min.js"></script>
+  <script src="assets/js/theme-change.js"></script>
+  <!-- disable body scroll which navbar is in active -->
+  <script>
+    $(function () {
+      $('.navbar-toggler').click(function () {
+        $('body').toggleClass('noscroll');
+      })
+    });
+  </script>
+  <!-- disable body scroll which navbar is in active -->
+
+  <!--/MENU-JS-->
+  <script>
+    $(window).on("scroll", function () {
+      var scroll = $(window).scrollTop();
+
+      if (scroll >= 80) {
+        $("#site-header").addClass("nav-fixed");
+      } else {
+        $("#site-header").removeClass("nav-fixed");
+      }
+    });
+
+    //Main navigation Active Class Add Remove
+    $(".navbar-toggler").on("click", function () {
+      $("header").toggleClass("active");
+    });
+    $(document).on("ready", function () {
+      if ($(window).width() > 991) {
+        $("header").removeClass("active");
+      }
+      $(window).on("resize", function () {
+        if ($(window).width() > 991) {
+          $("header").removeClass("active");
+        }
+      });
+    });
+  </script>
+  <!--//MENU-JS-->
+  <script src="assets/js/bootstrap.min.js"></script>
+
+</body>
+
+</html>

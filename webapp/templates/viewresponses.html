@@ -1,0 +1,45 @@
+
+
+
+{% extends 'sbase.html' %}
+
+{% block content %}
+
+<font size="" color="#6600ff">{{msg}}</font>
+
+
+
+
+<br>
+<center><h2>View Exam Paper responses</h2></center>
+   
+<h5>
+<table id="tab" width="100%">
+
+<tr><th>#<th>Teacher Name<th>Teacher Email<th>View Paper<th>
+
+
+{% for r in data %}
+
+<tr><td>{{forloop.counter}}<td> {{r.teacher_name}}<td> {{r.teacher_email}}<td>
+<a href="{% url 'viewpdf' op=r.id %}" target="_blank">View Paper</a><td>
+
+
+	<form method="get" action="/finalizepaper/">
+	
+		<input type="hidden" value="{{r.eid}}" name="eid">
+		<input type="hidden" value="{{r.id}}" name="id">
+		<input type="hidden" value="{{r.pdf}}" name="paper">
+
+	 <input class="form-control"   type="submit" value="Finalize This Paper">
+
+</form>
+
+{% endfor %}
+
+</table>
+
+
+</body>
+
+{% endblock %}

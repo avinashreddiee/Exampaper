@@ -1,0 +1,37 @@
+
+
+
+{% extends 'sbase.html' %}
+
+{% block content %}
+
+<font size="" color="#6600ff">{{msg}}</font>
+
+
+
+<br>
+
+
+<center><h2>Teachers are</h2></center>
+
+
+<table id="tab" width="100%">
+
+<tr><th>#<th>Name<th>Email<th>Phone<th>Subject
+{% for r in data %}
+<tr><td><b>{{forloop.counter}}<td> {{r.name}}<td> {{r.email}}<td>{{r.phone}}<td>{{r.subject}}
+<tr><td colspan="5"><b>Work Experience:</b>
+<br>{{r.work_exp}}
+
+<tr><td colspan="5"><b>Working at:</b>
+<br>{{r.work_address}}
+
+{% endfor %}
+
+	</table>
+
+<br><hr><br>
+
+</body>
+
+{% endblock %}

@@ -1,0 +1,79 @@
+
+
+{% extends 'abase.html' %}
+
+{% block content %}
+
+<font size="+1" color="#6600ff">{{msg}}</font>
+
+<style>
+        body {
+   
+        }
+        form {
+            max-width: 700px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-shadow: 2px 2px 12px #aaa;
+        }
+        label {
+            font-weight: bold;
+        }
+        input, select {
+            width: 100%;
+            padding: 8px;
+            margin: 8px 0 16px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+
+                            <table align="right">
+                            <tr>
+								<td><a class="nav-link" href="/viewstaff"><h3><u>View Superintendents</u></h3></a></td>
+                            </tr>
+                            </table>
+
+
+    <h2>Add superintendent </h2><br>
+    <form method="POST" action="/addstaffaction/">
+        {% csrf_token %}
+
+        <!-- Basic Details -->
+     <table><tr><td>   <label for="name">Name:</label>
+        <input type="text" id="name" name="name" maxlength="100" required />
+<td>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required />
+<tr>	<td>	
+		<label for="email">Password:</label>
+        <input type="password" id="password" name="password" required />
+
+      	<td>	  <label for="phone">Phone:</label>
+        <input type="text" id="phone" name="phone" maxlength="15" />
+<tr>
+
+      	<td>	  <label for="designation">Designation:</label>
+        <input type="text" id="designation" name="designation" maxlength="100" required />
+
+     <td> <br>  <button type="submit">Submit</button>
+    </form>
+</body>
+
+	</table>
+{% endblock %}
